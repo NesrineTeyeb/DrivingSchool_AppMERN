@@ -2,10 +2,10 @@
 // Routes d'authentification (login, register)
 
 const express = require("express");
-const { registerUser, loginUser } = require("../controllers/authController");
+const { signup, login } = require("../controllers/authController");
 const router = express.Router();
 
-router.post("/register", registerUser);
-router.post("/login", loginUser);
+router.post("/signup", signup);
+router.post("/login", login);
 
 module.exports = router;

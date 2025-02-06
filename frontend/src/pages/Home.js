@@ -1,12 +1,19 @@
-import React from 'react'
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
-  return (
-    <div>
-        <h1>Welcome to our Driving School </h1>
-        <p>Your path to safe and confident Driving!</p>
-    </div>
-  )
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token) {
+      navigate("/home-user"); // Redirige vers HomeUser si connecté
+    } else {
+      navigate("/home-guest"); // Sinon vers HomeGuest
+    }
+  }, [navigate]);
+
+  return null; // Ce composant ne rend rien
 }
 
-export default Home
+export default Home;

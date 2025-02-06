@@ -49,10 +49,6 @@ app.listen(PORT, () => {
   console.log(`🚀 Serveur lancé sur le port ${PORT}`);
 });
 
-
-
-
-
 // // //  Point d'entrée du backend (serveur Express)
 // // // Importation des modules nécessaires
 // const express = require("express");
